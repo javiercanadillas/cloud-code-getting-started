@@ -1,0 +1,4 @@
+#!/usr/bin/false
+
+export MINIKUBE_IN_STYLE=false
+#export MINIKUBE_HOME=$HOME/.minikube

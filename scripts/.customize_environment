@@ -1,0 +1,12 @@
+#!/bin/sh
+MK_CLUSTER_NAME="local"
+
+start_minikube(){
+    minikube start -p "$MK_CLUSTER_NAME"
+}
+
+main(){
+    start_minikube
+}
+
+main "$@"
