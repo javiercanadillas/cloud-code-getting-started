@@ -3,7 +3,7 @@
 
 EXTRA_BASHRC=".bashrc_extra"
 CUST_NAME=".customize_environment"
-SCRIPTS_PATH="$HOME/dev-cloud-code/scripts"
+SCRIPTS_PATH="$HOME/cloud-code-getting-started/scripts"
 
 # Copy Cloud Shell customization and launch it
 cp "$SCRIPTS_PATH/$CUST_NAME" "$HOME"
