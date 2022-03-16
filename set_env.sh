@@ -7,7 +7,8 @@ SCRIPTS_PATH="$HOME/cloud-code-getting-started/scripts"
 
 # Copy Cloud Shell customization and launch it
 cp "$SCRIPTS_PATH/$CUST_NAME" "$HOME"
-. "{$HOME/$CUST_NAME}"
+# shellcheck source=.customize_environment
+source "${HOME}/${CUST_NAME}"
 
 # Modify bashrc to include user-based customizations
 cp "$SCRIPTS_PATH/$EXTRA_BASHRC" "$HOME/$EXTRA_BASHRC"
