@@ -4,7 +4,7 @@
 # use .bash_profile_local instead.                                #
 ###################################################################
 DOTFILES_LOC="${HOME}/.dotfiles"
-EXTRA_BASH_PROFILE="${HOME}/.bash_profile_local"
+EXTRA_BASH_PROFILE_LOC="${HOME}/.bash_profile_local"
 
 ## Source the existing bashrc file, make no distiction between
 ## interactive and non-interactive shells
@@ -30,4 +30,4 @@ export PATH="${PATH}:${HOME}/bin"
 
 ## Source extra user-defined configuration file
 # shellcheck source=/dev/null
-source "$EXTRA_BASH_PROFILE"
+source "$EXTRA_BASH_PROFILE_LOC"
