@@ -5,6 +5,7 @@ CUST_FILENAME=".customize_environment"
 REPO_NAME="cloud-code-getting-started"
 LOCAL_BIN_DIR="${HOME}/bin"
 SCRIPTS_PATH="$HOME/$REPO_NAME/scripts"
+EXTRA_BASH_PROFILE="${HOME}/.bash_profile_local"
 
 ## Check Cloud Shell
 check_cloud_shell(){
@@ -34,6 +35,7 @@ copy_source_scripts(){
   cp "$SCRIPTS_PATH/prompt" "$DOTFILES_LOC"
   cp "$SCRIPTS_PATH/$CUST_FILENAME" "$HOME"
   cp "$SCRIPTS_PATH/.bash_profile" "$HOME"
+  cp "$SCRIPTS_PATH/$EXTRA_BASH_PROFILE" "$HOME"
   # shellcheck source=/dev/null
   source "${HOME}/${CUST_NAME}"
   # shellcheck source=/dev/null
