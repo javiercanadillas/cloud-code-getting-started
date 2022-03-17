@@ -2,9 +2,11 @@
 MK_PROFILE_NAME="local"
 
 ## Create a minikube profile and stop it
+## You can start the profile whenever you want with minikube -p local start
+##  and list the profiles with minikube profile list
 create_minikube(){
     minikube start -p "$MK_PROFILE_NAME"
-    minikube stop
+    minikube stop -p local
 }
 
 main(){

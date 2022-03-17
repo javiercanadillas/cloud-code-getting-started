@@ -1,6 +1,9 @@
-#!/usr/bin/env bash
-# Repo path
+# shellcheck shell=bash
+#!/usr/bin/false
+###   THIS SCRIPT IS WRITTEN TO BE SOURCED   ###
+### Execute it like source ./set_env_cust.sh ###
 
+## Vars
 CUST_FILENAME=".customize_environment"
 REPO_NAME="cloud-code-getting-started"
 LOCAL_BIN_DIR="${HOME}/bin"
