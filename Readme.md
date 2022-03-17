@@ -11,5 +11,5 @@ Then, go to the repo directory and run the `set_env_cust.sh` file.
 
 ```
 cd cloud-code-getting-started
- source ./set_env_cust.sh
+ source set_env_cust.sh
 ```

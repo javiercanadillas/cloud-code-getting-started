@@ -9,6 +9,7 @@ REPO_NAME="cloud-code-getting-started"
 LOCAL_BIN_DIR="${HOME}/bin"
 SCRIPTS_PATH="$HOME/$REPO_NAME/scripts"
 EXTRA_BASH_PROFILE_NAME=".bash_profile_local"
+DOTFILES_LOC="${HOME}/.dotfiles"
 
 ## Check Cloud Shell
 check_cloud_shell(){
@@ -32,7 +33,6 @@ install_bat(){
 ## and source them
 copy_source_scripts(){
   ## Enable bash powerline prompt
-  local -r DOTFILES_LOC="${HOME}/.dotfiles"
   mkdir -p "$DOTFILES_LOC"
   # Copy and source shell login customization scripts
   cp "$SCRIPTS_PATH/prompt" "$DOTFILES_LOC"
@@ -40,7 +40,7 @@ copy_source_scripts(){
   cp "$SCRIPTS_PATH/.bash_profile" "$HOME"
   cp "$SCRIPTS_PATH/$EXTRA_BASH_PROFILE_NAME" "$HOME"
   # shellcheck source=/dev/null
-  source "${HOME}/${CUST_NAME}"
+  source "${HOME}/${CUST_FILENAME}"
   # shellcheck source=/dev/null
   source "${HOME}"/.bash_profile
 }
