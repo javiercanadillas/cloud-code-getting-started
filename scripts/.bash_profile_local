@@ -1,0 +1,7 @@
+# shellcheck shell=bash
+###################################################################
+# Bash Profile local customization file, sourced by .bash_profile #
+# Add your per-user configurations here.                          #
+###################################################################
+
+export MINIKUBE_IN_STYLE=false

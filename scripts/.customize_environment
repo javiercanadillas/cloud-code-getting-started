@@ -1,12 +1,15 @@
 #!/bin/sh
-MK_CLUSTER_NAME="local"
+MK_PROFILE_NAME="local"
 
-start_minikube(){
-    minikube start -p "$MK_CLUSTER_NAME"
+## Create a minikube profile and stop it
+create_minikube(){
+    minikube start -p "$MK_PROFILE_NAME"
+    minikube stop
 }
 
 main(){
-    start_minikube
+    # Comment the following line to disable profile creation
+    create_minikube
 }
 
 main "$@"
