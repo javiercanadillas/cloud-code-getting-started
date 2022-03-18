@@ -17,7 +17,7 @@ fi
 ## Enable rich color in the terminal
 export TERM=xterm-256color
 
-## Actually make Minikube _stylish_
+## Make Minikube truly _stylish_
 export MINIKUBE_IN_STYLE=false
 
 ## Enable customized prompt (Bash powerline)
