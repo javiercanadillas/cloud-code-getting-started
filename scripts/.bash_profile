@@ -5,6 +5,7 @@
 ###################################################################
 DOTFILES_LOC="${HOME}/.dotfiles"
 EXTRA_BASH_PROFILE_LOC="${HOME}/.bash_profile_local"
+FZF_DIR="$HOME/.config/fzf"
 
 ## Source the existing bashrc file, make no distiction between
 ## interactive and non-interactive shells
@@ -27,6 +28,9 @@ source "${DOTFILES_LOC}/prompt"
 function code {
   cloudshell edit "${@}"
 }
+
+## Enable fzf completion
+[ -f "$FZF_DIR/.fzf.bash" ] && source "$FZF_DIR/.fzf.bash"
 
 ## Include local bin dir in PATH
 export PATH="${PATH}:${HOME}/bin"

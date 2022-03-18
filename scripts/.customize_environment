@@ -1,17 +1,7 @@
 #!/bin/sh
-MK_PROFILE_NAME="local"
+## This script runs as root!
 
-## Create a minikube profile and stop it
-## You can start the profile whenever you want with minikube -p local start
-##  and list the profiles with minikube profile list
-create_minikube(){
-    minikube start -p "$MK_PROFILE_NAME"
-    minikube stop -p local
-}
-
-main(){
-    # Comment the following line to disable profile creation
-    create_minikube
-}
-
-main "$@"
+## Update packages
+apt update -y
+## Install additional useful tools
+apt install hey

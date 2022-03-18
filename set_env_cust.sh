@@ -29,6 +29,17 @@ install_bat(){
   rm ./*.deb
 }
 
+## Install fzf fuzzy search tool
+install_fzf(){
+  pushd $HOME
+  git clone https://github.com/lincheney/fzf-tab-completion
+  FZF_DIR="$HOME/.config/fzf"
+  mkdir -p "$FZF_DIR"
+  cp ./fzf-tab-completion/bash/*.sh "$FZF_DIR/.fzf.bash"
+  popd
+}
+
+
 ## Copy Cloud Shell customization scripts
 ## and source them
 copy_source_scripts(){
@@ -40,7 +51,6 @@ copy_source_scripts(){
   cp "$SCRIPTS_PATH/.bash_profile" "$HOME"
   cp "$SCRIPTS_PATH/$EXTRA_BASH_PROFILE_NAME" "$HOME"
   # shellcheck source=/dev/null
-  MINIKUBE_IN_STYLE=false
   source "${HOME}/${CUST_FILENAME}"
   # shellcheck source=/dev/null
   source "${HOME}"/.bash_profile
