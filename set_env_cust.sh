@@ -51,7 +51,7 @@ copy_source_scripts(){
   cp "$SCRIPTS_PATH/.bash_profile" "$HOME"
   cp "$SCRIPTS_PATH/$EXTRA_BASH_PROFILE_NAME" "$HOME"
   # shellcheck source=/dev/null
-  source "${HOME}/${CUST_FILENAME}"
+  sudo "${HOME}/${CUST_FILENAME}"
   # shellcheck source=/dev/null
   source "${HOME}"/.bash_profile
 }
