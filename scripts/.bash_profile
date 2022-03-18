@@ -29,9 +29,6 @@ function code {
   cloudshell edit "${@}"
 }
 
-## Enable fzf completion
-[ -f "$FZF_DIR/.fzf.bash" ] && source "$FZF_DIR/.fzf.bash"
-
 ## Include local bin dir in PATH
 export PATH="${PATH}:${HOME}/bin"
 
