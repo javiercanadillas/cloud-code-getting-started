@@ -4,4 +4,4 @@
 ## Update packages
 apt update -y
 ## Install additional useful tools
-apt install hey fzf
+apt install hey
